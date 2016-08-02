@@ -243,7 +243,7 @@ th {
   src: url("../fonts/iconfont.eot");
   src: url("../fonts/iconfont.eot?#iefix") format("embedded-opentype"), url("../fonts/iconfont.woff2") format("woff2"), url("../fonts/iconfont.woff") format("woff"), url("../fonts/iconfont.ttf") format("truetype"), url("../fonts/iconfont.svg#svgFontName") format("svg"); }
 
-.icon {
+.icon, .form-control-select .form-control:before {
   font-family: "iconfont";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -253,7 +253,7 @@ th {
   text-decoration: none;
   text-transform: none;
   font-size: 1.2em; }
-  .icon:before {
+  .icon:before, .form-control-select .form-control:before {
     font-size: inherit;
     font-family: "iconfont";
     -webkit-font-smoothing: antialiased;
@@ -2374,10 +2374,22 @@ select[multiple].input-lg,
     font-size: 12px; } }
 
 .form-control-select {
+  position: relative;
   padding: 0;
   position: relative; }
-  .form-control-select > .fom-control-select {
-    content: ' X'; }
+  .form-control-select .form-control:before {
+    content: ""; }
+  .form-control-select .form-control:before {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center; }
   .form-control-select > select.form-control {
     position: absolute;
     border: none;
@@ -2393,8 +2405,7 @@ select[multiple].input-lg,
     bottom: 1px;
     padding-top: 0;
     padding-bottom: 0;
-    padding-left: 40px;
-    width: calc(100% - 4px);
+    width: calc(100% - 2px);
     height: calc(100% - 2px); }
     .form-control-select > select.form-control:focus {
       border: none;
