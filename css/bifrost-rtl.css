@@ -3581,7 +3581,9 @@ input[type="button"].btn-block {
 
 .btn {
   position: relative;
-  transition: all 0.3s !important;
+  transition: -webkit-transform 0.3s !important;
+  transition: transform 0.3s !important;
+  transition: transform 0.3s, -webkit-transform 0.3s !important;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1); }
@@ -3589,7 +3591,9 @@ input[type="button"].btn-block {
     -webkit-transform: scale(0.96);
     -ms-transform: scale(0.96);
     transform: scale(0.96);
-    transition: all 0.3s !important; }
+    transition: -webkit-transform 0.3s !important;
+    transition: transform 0.3s !important;
+    transition: transform 0.3s, -webkit-transform 0.3s !important; }
 
 .fade {
   opacity: 0;
