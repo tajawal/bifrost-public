@@ -425,7 +425,7 @@ img {
   height: auto; }
 
 .img-rounded {
-  border-radius: 6px; }
+  border-radius: 4px; }
 
 .img-thumbnail {
   padding: 4px;
@@ -1109,7 +1109,7 @@ kbd {
   font-size: 90%;
   color: #fff;
   background-color: #333;
-  border-radius: 2px;
+  border-radius: 4px;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25); }
   kbd kbd {
     padding: 0;
@@ -1946,7 +1946,7 @@ output {
   display: block;
   width: 100%;
   height: 44px;
-  padding: 12px 12px;
+  padding: 12px 15px;
   font-size: 13px;
   line-height: 1.428571;
   color: #123867;
@@ -2122,7 +2122,7 @@ fieldset[disabled]
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 2px; }
+  border-radius: 4px; }
 
 select.input-sm, .input-group-sm > select.form-control,
 .input-group-sm > select.input-group-addon,
@@ -2144,7 +2144,7 @@ select[multiple].input-sm,
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 2px; }
+  border-radius: 4px; }
 
 .form-group-sm select.form-control {
   height: 30px;
@@ -2168,7 +2168,7 @@ select[multiple].input-sm,
   padding: 10px 16px;
   font-size: 17px;
   line-height: 1.333333;
-  border-radius: 6px; }
+  border-radius: 4px; }
 
 select.input-lg, .input-group-lg > select.form-control,
 .input-group-lg > select.input-group-addon,
@@ -2190,7 +2190,7 @@ select[multiple].input-lg,
   padding: 10px 16px;
   font-size: 17px;
   line-height: 1.333333;
-  border-radius: 6px; }
+  border-radius: 4px; }
 
 .form-group-lg select.form-control {
   height: 45px;
@@ -2555,7 +2555,7 @@ select[multiple].input-lg,
   background-image: none;
   border: 1px solid transparent;
   white-space: nowrap;
-  padding: 12px 12px;
+  padding: 12px 15px;
   font-size: 13px;
   line-height: 1.428571;
   border-radius: 4px;
@@ -2830,19 +2830,19 @@ fieldset[disabled] a.btn {
   padding: 10px 16px;
   font-size: 17px;
   line-height: 1.333333;
-  border-radius: 6px; }
+  border-radius: 4px; }
 
 .btn-sm, .btn-group-sm > .btn {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 2px; }
+  border-radius: 4px; }
 
 .btn-xs, .btn-group-xs > .btn {
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 2px; }
+  border-radius: 4px; }
 
 .btn-block {
   display: block;
@@ -3563,7 +3563,33 @@ input[type="button"].btn-block {
     color: #d32f2f;
     background-color: #123867; }
   .btn-cta:hover {
-    background: linear-gradient(#f6c857, #f6c857); }
+    background: linear-gradient(#f8d957, #f6c857); }
+  .btn-cta:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: black;
+    opacity: 0;
+    border-radius: 4px;
+    transition: opacity 0.3s; }
+  .btn-cta:hover:after {
+    opacity: 0.1;
+    transition: opacity 0.3s; }
+
+.btn {
+  position: relative;
+  transition: all 0.3s !important;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1); }
+  .btn:active {
+    -webkit-transform: scale(0.96);
+    -ms-transform: scale(0.96);
+    transform: scale(0.96);
+    transition: all 0.3s !important; }
 
 .fade {
   opacity: 0;
@@ -3922,7 +3948,7 @@ tbody.collapse.in {
   vertical-align: middle; }
 
 .input-group-addon {
-  padding: 12px 12px;
+  padding: 12px 15px;
   font-size: 13px;
   font-weight: normal;
   line-height: 1;
@@ -3936,13 +3962,13 @@ tbody.collapse.in {
   .input-group-sm > .input-group-btn > .input-group-addon.btn {
     padding: 5px 10px;
     font-size: 12px;
-    border-radius: 2px; }
+    border-radius: 4px; }
   .input-group-addon.input-lg,
   .input-group-lg > .input-group-addon,
   .input-group-lg > .input-group-btn > .input-group-addon.btn {
     padding: 10px 16px;
     font-size: 17px;
-    border-radius: 6px; }
+    border-radius: 4px; }
   .input-group-addon input[type="radio"],
   .input-group-addon input[type="checkbox"] {
     margin-top: 0; }
@@ -4534,7 +4560,7 @@ tbody.collapse.in {
     .pagination > li > span {
       position: relative;
       float: right;
-      padding: 12px 12px;
+      padding: 12px 15px;
       line-height: 1.428571;
       text-decoration: none;
       color: #48bae3;
@@ -4585,13 +4611,13 @@ tbody.collapse.in {
 
 .pagination-lg > li:first-child > a,
 .pagination-lg > li:first-child > span {
-  border-bottom-right-radius: 6px;
-  border-top-right-radius: 6px; }
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px; }
 
 .pagination-lg > li:last-child > a,
 .pagination-lg > li:last-child > span {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px; }
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px; }
 
 .pagination-sm > li > a,
 .pagination-sm > li > span {
@@ -4601,13 +4627,13 @@ tbody.collapse.in {
 
 .pagination-sm > li:first-child > a,
 .pagination-sm > li:first-child > span {
-  border-bottom-right-radius: 2px;
-  border-top-right-radius: 2px; }
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px; }
 
 .pagination-sm > li:last-child > a,
 .pagination-sm > li:last-child > span {
-  border-bottom-left-radius: 2px;
-  border-top-left-radius: 2px; }
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px; }
 
 .pager {
   padding-right: 0;
@@ -4758,7 +4784,7 @@ a.badge:hover, a.badge:focus {
     border-top-color: #d5d5d5; }
   .container .jumbotron,
   .container-fluid .jumbotron {
-    border-radius: 6px;
+    border-radius: 4px;
     padding-right: 8px;
     padding-left: 8px; }
   .jumbotron .container {
@@ -5471,11 +5497,11 @@ button.list-group-item-danger {
 
 .well-lg {
   padding: 24px;
-  border-radius: 6px; }
+  border-radius: 4px; }
 
 .well-sm {
   padding: 9px;
-  border-radius: 2px; }
+  border-radius: 4px; }
 
 .close {
   float: left;
@@ -5540,7 +5566,7 @@ button.close {
   background-color: #fff;
   border: 1px solid #e5e5e5;
   border: 1px solid #e5e5e5;
-  border-radius: 6px;
+  border-radius: 4px;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
   outline: 0; }
@@ -5757,7 +5783,7 @@ button.close {
   background-clip: padding-box;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
+  border-radius: 4px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
   .popover.top {
     margin-top: -10px; }
@@ -5774,7 +5800,7 @@ button.close {
   font-size: 13px;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
-  border-radius: 5px 5px 0 0; }
+  border-radius: 3px 3px 0 0; }
 
 .popover-content {
   padding: 9px 14px; }
